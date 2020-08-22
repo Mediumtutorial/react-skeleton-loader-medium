@@ -14,7 +14,7 @@ export default class App extends Component {
   async getUsersData(){
     /* With Timeout */
     return await setTimeout(async () => {
-      const res = await axios.get('http://jsonplaceholder.typicode.com/users')
+      const res = await axios.get('https://jsonplaceholder.typicode.com/users')
       const users = res.data.slice(0, 4)
     this.setState({users, loading:false})
     }, 3000)
